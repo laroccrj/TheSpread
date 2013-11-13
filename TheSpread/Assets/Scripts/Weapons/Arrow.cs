@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public delegate void Del(string message);
-
 public class Arrow : MonoBehaviour
 {
-	public Del del;
 	public float flyTime;
 	public Collider childCollider;
 	
@@ -16,12 +13,6 @@ public class Arrow : MonoBehaviour
 	void Start()
 	{
 		this.stopTime = Time.time + this.flyTime;
-		this.del = method;
-	}
-	
-	void method(string message)
-	{
-		
 	}
 	
 	void Update ()
